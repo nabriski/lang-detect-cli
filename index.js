@@ -12,8 +12,8 @@ const argv      = require('yargs')
         default : []
       })
     .nargs("mime",0)
-    .example('$0 -l javascript xml')
-    .example('$0 -m -l json html css')
+    .example('$0 -l javascript xml < file')
+    .example('echo {\"koko\":1} | $0 -m -l json html css')
     .help()
     .argv;
 const hljs      = require("highlight.js");

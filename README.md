@@ -1,4 +1,4 @@
-```bash
+```
 ./index.js
 
 Options:
@@ -9,6 +9,6 @@ Options:
   --help      Show help                                                [boolean]
 
 Examples:
-  index.js -l javascript xml
-  index.js -m -l json html css
+  index.js -l javascript xml < file
+  echo {"koko":1} | index.js -m -l json html css
 ```
