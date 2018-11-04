@@ -1,6 +1,9 @@
 # Programming Language Detection CLI
 Based on [highlight.js](https://highlightjs.org/)
 ## Install
+```
+npm install -g lang-detect
+```
 ## Usage
 ```
 lang-detect
