@@ -1,6 +1,8 @@
 #!/usr/bin/env node
+const prog = "lang-detect";
 const argv      = require('yargs')
-    .usage('./$0')
+    .usage(`${prog}`)
+    .usage("Read string from stdin and detect programming language.")
     .option('mime', {
         alias: 'm',
         describe: 'get output as a mime type'
@@ -12,8 +14,8 @@ const argv      = require('yargs')
         default : []
       })
     .nargs("mime",0)
-    .example('$0 -l javascript xml < file')
-    .example('echo "{\\\"koko\\\":1}" | $0 -m -l json html css # output is \'application/json\'')
+    .example(`${prog} -l javascript xml < file`)
+    .example(`echo "{\\\"koko\\\":1}" | ${prog} -m -l json html css # output is \'application/json\'`)
     .help()
     .argv;
 const hljs      = require("highlight.js");

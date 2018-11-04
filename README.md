@@ -1,5 +1,7 @@
+# Language Detect CLI
 ```
-./index.js
+lang-detect
+Read string from stdin and detect programming language.
 
 Options:
   --version   Show version number                                      [boolean]
@@ -9,7 +11,7 @@ Options:
   --help      Show help                                                [boolean]
 
 Examples:
-  index.js -l javascript xml < file
-  echo "{\"koko\":1}" | index.js -m -l json html css # output is
+  lang-detect -l javascript xml < file
+  echo "{\"koko\":1}" | lang-detect -m -l json html css # output is
   'application/json'
 ```
