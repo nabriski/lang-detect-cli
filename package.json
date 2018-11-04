@@ -6,6 +6,9 @@
   "scripts": {
     "test": "tap test/*.js"
   },
+  "bin": {
+      "lang-detect": "./index.js"
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nabriski/lang-detect-cli.git"
