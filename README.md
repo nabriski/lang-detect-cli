@@ -2,7 +2,7 @@
 Based on [highlight.js](https://highlightjs.org/)
 ## Install
 ```
-npm install -g lang-detect
+npm install -g lang-detect-cli
 ```
 ## Usage
 ```
