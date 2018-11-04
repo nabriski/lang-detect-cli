@@ -30,6 +30,7 @@ getStdin().then(str => {
         lang = mime.getType(lang);
     }
     //console.log(lang);
+    if(!lang) lang = "";
     process.stdout.write(lang+"\n");
 });
 

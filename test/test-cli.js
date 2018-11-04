@@ -12,3 +12,6 @@ tap.equal(ret,"json\n","string is json");
 
 ret = shell.exec("echo \"{\\\"koko\\\":1}\" | ./index.js -m -l json html").stdout;
 tap.equal(ret,"application/json\n","string is application/json");
+
+ret = shell.exec("echo koko | ./index.js -m -l json html").stdout;
+tap.equal(ret,"\n","no match - string is empty");
