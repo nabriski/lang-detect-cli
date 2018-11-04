@@ -13,24 +13,22 @@ const argv      = require('yargs')
       })
     .nargs("mime",0)
     .example('$0 -l javascript xml < file')
-    .example('echo {\"koko\":1} | $0 -m -l json html css # output is \'application/json\'')
+    .example('echo "{\\\"koko\\\":1}" | $0 -m -l json html css # output is \'application/json\'')
     .help()
     .argv;
 const hljs      = require("highlight.js");
 const getStdin  = require("get-stdin");
-const Mime = require('mime/Mime');
-const typeMap = {
-  'text/javascript': ['javascript'],
-  'text/css' : ['css']
-};
-const mime = new Mime(typeMap);
+const mime = require('mime');
+
+mime._types.javascript = mime._types.js;
 
 getStdin().then(str => {
-    lang = hljs.highlightAuto(str,argv.l).language;
+    lang = hljs.highlightAuto(str,argv.lang).language;
     if(argv.m){
         lang = mime.getType(lang);
     }
-    console.log(lang);
+    //console.log(lang);
+    process.stdout.write(lang+"\n");
 });
 
 

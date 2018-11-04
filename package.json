@@ -4,11 +4,11 @@
   "description": "Detect Programming Language From String",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "node test/*.js"
   },
   "bin": {
       "lang-detect": "./index.js"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nabriski/lang-detect-cli.git"

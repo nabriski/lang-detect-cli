@@ -1,5 +1,5 @@
-```bash
-lang-detect
+```
+./index.js
 
 Options:
   --version   Show version number                                      [boolean]
@@ -9,7 +9,7 @@ Options:
   --help      Show help                                                [boolean]
 
 Examples:
-  lang-detect -l javascript xml < file
-  echo {"koko":1} | lang-detect -m -l json html css # output is
+  index.js -l javascript xml < file
+  echo "{\"koko\":1}" | index.js -m -l json html css # output is
   'application/json'
 ```
