@@ -1,4 +1,7 @@
-# Language Detect CLI
+# Programming Language Detection CLI
+Based on [highlight.js](https://highlightjs.org/)
+## Install
+## Usage
 ```
 lang-detect
 Read string from stdin and detect programming language.
